@@ -1,1 +1,428 @@
+using System;
 
+class MainClass {
+  public static void Main (string[] args) {
+    //var storage
+    string capital = "";
+    string state = "";
+    string maybe = "";
+    Console.WriteLine ("Would you like to type a state or a capital of a state? (enter state or capital)");
+    maybe = Console.ReadLine();
+    if (maybe == "state") {
+ Console.WriteLine("Enter a U.S. state.\n");
+    state = Console.ReadLine();
+    switch (state) {
+      case "Alabama":
+      case "alabama":
+      capital = "Montgomery";
+      break;
+      case "Alaska":
+      case "alaska":
+      capital = "Juneau";
+      break;
+      case "Arizona":
+      case "arizona":
+      capital = "Phoenix";
+      break;
+      case "Arkansas":
+      case "arkansas":
+      capital = "Little Rock";
+      break;
+      case "California":
+      case "california":
+      capital = "Sacramento";
+      break;
+      case "Colorado":
+      case "colorado":
+      capital = "Denver";
+      break;
+      case "Connecticut":
+      case "connecticut":
+      capital = "Hartford";
+      break;
+      case "Delaware":
+      case "delaware":
+      capital = "Dover";
+      break;
+      case "Florida":
+      case "florida":
+      capital = "Tallahassee";
+      break;
+      case "Georgia":
+      case "georgia":
+      capital = "Atlanta";
+      break;
+      case "Hawaii":
+      case "hawaii":
+      capital = "Honolulu";
+      break;;
+      case "Idaho":
+      case "idaho":
+      capital = "Boise";
+      break;
+      case "Illinois":
+      case "illinois":
+      capital = "Springfield";
+      break;
+      case "Indiana":
+      case "indiana":
+      capital = "Indianapolis";
+      break;
+      case "Iowa":
+      case "iowa":
+      capital = "Des Moines";
+      break;
+      case "Kansas":
+      case "kansas":
+      capital = "Topeka";
+      break;
+      case "Kentucky":
+      case "kentucky":
+      capital = "Frankfort";
+      break;
+      case "Louisiana":
+      case "louisiana":
+      capital = "Baton Rouge";
+      break;
+      case "Maine":
+      case "maine":
+      capital = "Augusta";
+      break;
+      case "Maryland":
+      case "maryland":
+      capital = "Annapolis";
+      break;
+      case "Massachusetts":
+      case "massachusetts":
+      capital = "Boston";
+      break;
+      case "Michigan":
+      case "michigan":
+      capital = "Lansing";
+      break;
+      case "Minnesota":
+      case "minnesota":
+      capital = "St. Paul";
+      break;
+      case "Mississippi":
+      case "mississippi":
+      capital = "Jackson";
+      break;
+      case "Missouri":
+      case "missouri":
+      capital = "Jefferson City";
+      break;
+      case "Montana":
+      case "montana":
+      capital = "Helena";
+      break;
+      case "Nebraska":
+      case "nebraska":
+      capital = "Lincoln";
+      break;
+      case "Nevada":
+      case "nevada":
+      capital = "Carson City";
+      break;
+      case "New Hampshire":
+      case "new hampshire":
+      capital = "Concord";
+      break;
+      case "New Jersey":
+      case "new jersey":
+      capital = "Trenton";
+      break;
+      case "New Mexico":
+      case "new mexico":
+      capital = "Santa Fe";
+      break;
+      case "New York":
+      case "new york":
+      capital = "Albany";
+      break;
+      case "North Carolina":
+      case "north carolina":
+      capital = "Raleigh";
+      break;
+      case "North Dakota":
+      case "north dakota":
+      capital = "Bismarck";
+      break;
+      case "Ohio":
+      case "ohio":
+      capital = "Columbus";
+      break;
+      case "Oklahoma":
+      case "oklahoma":
+      capital = "Oklahoma City";
+      break;
+      case "Oregon":
+      case "oregon":
+      capital = "Salem";
+      break;
+      case "Pennsylvania":
+      case "pennsylvania":
+      capital = "Harrisburg";
+      break;
+      case "Rhode Island":
+      case "rhode island":
+      capital = "Providence";
+      break;
+      case "South Carolina":
+      case "south carolina":
+      capital = "Columbia";
+      break;
+      case "South Dakota":
+      case "south dakota":
+      capital = "Pierre";
+      break;
+      case "Tennessee":
+      case "tennessee":
+      capital = "Nashville";
+      break;
+      case "Texas":
+      case "texas":
+      capital = "Austin";
+      break;
+      case "Utah":
+      case "utah":
+      capital = "Salt Lake City";
+      break;
+      case "Vermont":
+      case "vermont":
+      capital = "Montpelier";
+      break;
+      case "Virginia":
+      case "virginia":
+      capital = "Richmond";
+      break;
+      case "Washington":
+      case "washington":
+      capital = "Olympia";
+      break;
+      case "West Virginia":
+      case "west virginia":
+      capital = "Charleston";
+      break;
+      case "Wisconsin":
+      case "wisconsin":
+      capital = "Madison";
+      break;
+      case "Wyoming":
+      case "wyoming":
+      capital = "Cheyenne";
+      break;
+    }
+    Console.WriteLine("The Capital of {0} is {1}. Restart program to see other state capitals.", state, capital);
+    }
+    else if (maybe == "capital") {
+      Console.WriteLine("Enter the capital of a U.S. state.\n");
+    capital = Console.ReadLine();
+      switch (capital) {
+      case "Montgomery":
+      case "montgomery":
+      state = "Alabama";
+      break;
+      case "Juneau":
+      case "juneau":
+      state = "Alaska";
+      break;
+      case "Phoenix":
+      case "phoenix":
+      state = "Arizona";
+      break;
+      case "Little Rock":
+      case "little rock":
+      state = "Arkansas";
+      break;
+      case "Sacramento":
+      case "sacramento":
+      state = "California";
+      break;
+      case "Denver":
+      case "denver":
+      state = "Colorado";
+      break;
+      case "Hartford":
+      case "hartford":
+      state = "Connecticut";
+      break;
+      case "Dover":
+      case "dover":
+      state = "Delaware";
+      break;
+      case "Tallahassee":
+      case "tallahassee":
+      state = "Florida";
+      break;
+      case "Atlanta":
+      case "atlanta":
+      state = "Georgia";
+      break;
+      case "Honolulu":
+      case "honolulu":
+      state = "Hawaii";
+      break;;
+      case "Boise":
+      case "boise":
+      state = "Idaho";
+      break;
+      case "Springfield":
+      case "springfield":
+      state = "Illinois";
+      break;
+      case "Indianapolis":
+      case "indianapolis":
+      state = "Indiana";
+      break;
+      case "Des Moines":
+      case "des moines":
+      state = "Iowa";
+      break;
+      case "Topeka":
+      case "topeka":
+      state = "Kansas";
+      break;
+      case "Frankfort":
+      case "frankfort":
+      state = "Kentucky";
+      break;
+      case "Baton Rouge":
+      case "baton Rouge":
+      state = "Louisiana";
+      break;
+      case "Augusta":
+      case "augusta":
+      state = "Maine";
+      break;
+      case "Annapolis":
+      case "annapolis":
+      state = "Maryland";
+      break;
+      case "Boston":
+      case "boston":
+      state = "Massachusetts";
+      break;
+      case "Lansing":
+      case "lansing":
+      state = "Michigan";
+      break;
+      case "St. Paul":
+      case "st. paul":
+      state = "Minnesota";
+      break;
+      case "Jackson":
+      case "jackson":
+      state = "Mississippi";
+      break;
+      case "Jefferson City":
+      case "jefferson city":
+      state = "Missouri";
+      break;
+      case "Helena":
+      case "helena":
+      state = "Montana";
+      break;
+      case "Lincoln":
+      case "lincoln":
+      state = "Nebraska";
+      break;
+      case "Carson City":
+      case "carson city":
+      state = "Nevada";
+      break;
+      case "Concord":
+      case "concord":
+      state = "New Hampshire";
+      break;
+      case "Trenton":
+      case "trenton":
+      state = "New Jersey";
+      break;
+      case "Santa Fe":
+      case "santa fe":
+      state = "New Mexico";
+      break;
+      case "Albany":
+      case "albany":
+      state = "New York";
+      break;
+      case "Raleigh":
+      case "raleigh":
+      state = "North Carolina";
+      break;
+      case "Bismarck":
+      case "bismarck":
+      state = "North Dakota";
+      break;
+      case "Columbus":
+      case "columbus":
+      state = "Ohio";
+      break;
+      case "Oklahoma City":
+      case "oklahoma city":
+      state = "Oklahoma";
+      break;
+      case "Salem":
+      case "salem":
+      state = "Oregon";
+      break;
+      case "Harrisburg":
+      case "harrisburg":
+      state = "Pennsylvania";
+      break;
+      case "Providence":
+      case "providence":
+      state = "Rhode Island";
+      break;
+      case "Columbia":
+      case "columbia":
+      state = "South Carolina";
+      break;
+      case "Pierre":
+      case "pierre":
+      state = "South Dakota";
+      break;
+      case "Nashville":
+      case "nashville":
+      state = "Tennessee";
+      break;
+      case "Austin":
+      case "austin":
+      state = "Texas";
+      break;
+      case "Salt Lake City":
+      case "salt lake city":
+      state = "Utah";
+      break;
+      case "Montpelier":
+      case "montpelier":
+      state = "Vermont";
+      break;
+      case "Richmond":
+      case "richmond":
+      state = "Virginia";
+      break;
+      case "Olympia":
+      case "olympia":
+      state = "Washington";
+      break;
+      case "Charleston":
+      case "charleston":
+      state = "West Virginia";
+      break;
+      case "Madison":
+      case "madison":
+      state = "Wisconsin";
+      break;
+      case "Cheyenne":
+      case "cheyenne":
+      state = "Wyoming";
+      break;
+      }
+      Console.WriteLine("{0} is the capital of {1}. Restart program to see other states according to their capitals.", capital, state);
+    }
+   
+    
+  }
+}
