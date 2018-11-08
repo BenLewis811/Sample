@@ -78,7 +78,7 @@ class stringReplace1 {
    32 =  (space)
    */ 
     //capital alphabet
-    Console.WriteLine("Binary Translator");
+    Console.WriteLine("Binary Translator by: JARED PLASBERG.");
     Thread.Sleep(500);
     while (jared != "jared") {
     string[] calph = new string[26];
