@@ -1,10 +1,181 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Threading;
 
- public class Program 
- {
-       public static void Main(string[] args)
-       {
-       
-       }
- }
+namespace ConsoleApp1
+{
+    
+    //area class
+    public class Area
+    {
+        public static double pi = 3.14159265359;
+        //squares
+        public static double square(double a, double b)
+        {
+            double x = a * b;
+            return x;
+        }
+        //Circles
+        public static double circle(double a )
+        {
+            a *= a;
+           double b = a * pi;
+            return b;
+        }
+        //triangles
+        public static double triangle(double x, double y)
+        {
+            double z = x * y;
+            z /= 2;
+            return z;
+        }
+
+      
+    }
+    
+
+    // surface area code
+    public class SurfaceArea
+    {
+        public static double pi = 3.14159265359;
+        //surface area of cubes
+        public static double Cubes(double a, double b, double c)
+        {
+            double z = 2 * (a * b) + 2 * (a * c) + 2 * (b * c);
+            return z;
+        }
+        // surface area of pyramids
+        public static double Pyramid(double l, double w, double c)
+        {
+            c *= c;
+            double z = l * w;
+            double y = l / 2;
+            double x = w / 2;
+            x *= x; 
+            y *= y;
+            return z + l * Math.Sqrt(y + c) + w * Math.Sqrt(x + c);
+
+
+        }
+        //surface area of sphere
+        public static double Sphere(double radius)
+        {
+            radius *= radius;
+            double circlearea = 4 * pi * radius;
+            
+            return circlearea;
+        }
+    }
+
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Area area = new Area();
+            Console.WriteLine("would you like to find \n area \n surface area  ");
+            string operation = Console.ReadLine();
+            //switch statements to define operations 
+            switch (operation) {
+            
+                case "area":
+                    //what do you want to fing the area of?
+                    Console.WriteLine("would you like to find the area of a \n square\n circle \n triangle");
+                    string operation2 = Console.ReadLine();
+
+                switch (operation2) 
+                {
+                        //area of a square
+                        case "square":
+                    
+                            Console.Write("Type the length of the square");
+                            double SquareLength = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Now type the width ");
+                            double SquareHeight = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("{0} is the area of the square",Area.square(SquareLength, SquareHeight));
+                       break;
+
+
+                        //area of a circle
+                        case "circle":
+                            Console.Write("Type the length of the radius");
+                            double radius = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("{0} is the area of the circle",Area.circle(radius));
+                        break;
+
+
+                        //area of a triangle
+                        case "triangle":
+                            Console.WriteLine("Type the length of the base");
+                            double TriangleBase = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("Now the height");
+                            double TriangleHeight = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("{0} is the area of the triangle",Area.triangle(TriangleBase, TriangleHeight));
+                       break;  
+                       
+                    
+                }
+                    break;
+
+                case "surface area":
+                    SurfaceArea sfa = new SurfaceArea();
+                    Console.WriteLine("Would you like to find the surface area of \n rectangular prism\npyramid\nsphere");
+                    string operation3 = Console.ReadLine();
+                    switch(operation3)
+                    {
+                        //surface area of a rectangular prism
+                        case "rectangular prism":
+                            Console.WriteLine("Type the length of the rectangular prism");
+                            double RectangularPrismLength = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("Now the height of the rectangular prism");
+                            double RectangularPrismHeight = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("Now the width of the rectangular prism");
+                            double RectangularPrismWidth = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("{0} is the surface area of the rectangular prism", SurfaceArea.Cubes(RectangularPrismLength, RectangularPrismWidth, RectangularPrismHeight));
+
+                        break;
+                        // code for a pyramid
+                        case "pyramid":
+                            Console.WriteLine("Type the length of the base");
+                            double PyramidLength = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("Now type the width of the base");
+                            double PyramidWidth = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("now the height of the pyramid");
+                            double PyramidHeight = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("{0} is the surface area of a pyramid", SurfaceArea.Pyramid(PyramidLength, PyramidWidth, PyramidHeight));
+      
+                        break;
+                        //surface area of a sphere
+                        case "sphere":
+                            Console.WriteLine("Radius please");
+                            double SphereRadius = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("{0} is the surface area of the sphere", SurfaceArea.Sphere(SphereRadius));
+
+                            break;
+
+                   
+                    }
+
+                break;
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+            Console.ReadLine();
+        }
+    }
+}
