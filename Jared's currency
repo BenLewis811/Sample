@@ -1,1 +1,422 @@
+using System;
+using System.Threading;
+class MainClass
+{
+    public static void Main(string[] args)
+    {
+      /*list of currencies
+      1 USD United States Dollar
+      2 EUR Euro
+      3 JPY Japanese Yen
+      4 GBP Great British Pound
+      5 CHF Swiss Franc
+      6 CAD Canadian Dollar
+      7 AUD Australian Dollar
+      8 ZAR South African Rand
+      */
+      string quit = "";
+      while (quit != "quit"){
+      Console.WriteLine("Currency Conversion Calculator");
+      Thread.Sleep(1000);
+        Console.WriteLine("\nPlease enter a number corresponding to the currency below that you wish to convert from:\n\n(1) U.S. Dollar\n(2) European Euro\n(3) Japanese Yen\n(4) British Pound\n(5) Swiss Franc\n(6) Canadian Dollar\n(7) Australian Dollar\n(8) South African Rand\n\n (It is important to note that these conversion results are not completely up to date and should not be used as a tool; rather, a display of c sharp programming potential. These conversion values were accurate on 10/24/2018.)");
+        string system = Console.ReadLine();
+        int systm;
+        string input = "";
+        string inputt = "";
+        string usd = "$";
+        string eur = "€";
+        string jpy = "¥";
+        string gbp = "£";
+        string chf = "Fr.";
+        string cad = "$";
+        string aud = "$";
+        string zar = "R";
+        if (int.TryParse(system, out systm))
+        {
+            if (systm != 1 && systm != 2 && systm != 3 && systm != 4 && systm != 5 && systm != 6 && systm != 7 && systm != 8)
+            {
+                Console.WriteLine("You must type the number corresponding to the currency system. Restart program and try again.");
+                Environment.Exit(0);
+            }
+            else if ()
+            else {
 
+                switch (systm) {
+                    case 1:
+                        input = "U.S. Dollar";
+                        
+                            break;
+                    case 2:
+                        input = "European Euro";
+                            break;
+                    case 3:
+                        input = "Japanese Yen";
+                            break;
+                    case 4:
+                        input = "British Pound";
+                            break;
+                    case 5:
+                        input = "Swiss Franc";
+                            break;
+                    case 6:
+                        input = "Canadian Dollar";
+                            break;
+                    case 7:
+                        input = "Australian Dollar";
+                            break;
+                    case 8:
+                        input = "South African Rand";
+                            break;
+                }
+                Console.WriteLine("Alright now, please enter a number corresponding to the currency list below that you wish to convert your {0} to:\n\n(1) U.S.Dollar\n(2) European Euro\n(3) Japanese Yen\n(4) British Pound\n(5) Swiss Franc\n(6) Canadian Dollar\n(7) Australian Dollar\n(8) South African Rand", input);
+                string systemm = Console.ReadLine();
+                int systmm;
+                if (int.TryParse(systemm, out systmm)) {
+                    if (systm == systmm || input == inputt) {
+                        Console.WriteLine("You cannot convert a currency system to the same currency system. Restart program and try again.");
+                        Environment.Exit(0);
+                    }
+                    else if (systmm != 1 && systmm != 2 && systmm != 3 && systmm != 4 && systmm != 5 && systmm != 6 && systmm != 7 && systmm != 8)
+            {
+                Console.WriteLine("You must type the number corresponding to the currency system. Restart program and try again.");
+                Environment.Exit(0);
+            }
+                    
+                    switch (systmm) {
+                    case 1:
+                        inputt = "U.S. Dollar";
+                            break;
+                    case 2:
+                        inputt = "European Euro";
+                            break;
+                    case 3:
+                        inputt = "Japanese Yen";
+                            break;
+                    case 4:
+                        inputt = "British Pound";
+                            break;
+                    case 5:
+                        inputt = "Swiss Franc";
+                            break;
+                    case 6:
+                        inputt = "Canadian Dollar";
+                            break;
+                    case 7:
+                        inputt = "Australian Dollar";
+                            break;
+                    case 8:
+                        inputt = "South African Rand";
+                            break;
+                }
+                Console.WriteLine("Alright now, please enter the amount of {0}(s) that you would like to convert to {1}(s).", input, inputt);
+                
+                     string amount = Console.ReadLine();
+                     double amountt = Convert.ToDouble(amount);
+                     
+                       Console.WriteLine("Processing\n\n[{0} {1}(s) to {2}(s)]", amountt, input, inputt );
+                       int x = 0;
+                       while (x < 3) {
+                         Thread.Sleep(600);
+                         Console.Write(".");
+                         ++x;
+                       }
+                       // USD conversion values
+                       double[] USD = new double[7];
+                       USD[0] = 0.87193;
+                       USD[1] = 112.37;
+                       USD[2] = 0.77022;
+                       USD[3] = 0.99535;
+                       USD[4] = 1.30954;
+                       USD[5] = 1.41326;
+                       USD[6] = 14.3280;
+                       // EUR conversion values
+                       double[] EUR = new double[7];
+                       EUR[0] = 1.14672;
+                       EUR[1] = 128.86;
+                       EUR[2] = 0.88326;
+                       EUR[3] = 1.14147;
+                       EUR[4] = 1.50167;
+                       EUR[5] = 1.62073;
+                       EUR[6] = 16.4302;
+                       // JPY conversion values
+                       double[] JPY = new double[7];
+                       JPY[0] = 0.00890;
+                       JPY[1] = 0.00776;
+                       JPY[2] = 0.00685;
+                       JPY[3] = 0.00886;
+                       JPY[4] = 0.01165;
+                       JPY[5] = 0.01258;
+                       JPY[6] = 0.12749;
+                       // GBP conversion values
+                       double[] GBP = new double [7];
+                       GBP[0] = 1.29811;
+                       GBP[1] = 1.13190;
+                       GBP[2] = 145.87;
+                       GBP[3] = 1.29213;
+                       GBP[4] = 1.69992;
+                       GBP[5] = 1.83457;
+                       GBP[6] = 18.5993;
+                       // CHF conversion values
+                       double[] CHF = new double[7];
+                       CHF[0] = 1.00445;
+                       CHF[1] = 0.87586;
+                       CHF[2] = 112.87;
+                       CHF[3] = 0.77367;
+                       CHF[4] = 1.31536;
+                       CHF[5] = 1.41955;
+                       CHF[6] = 14.3918; 
+                       // CAD conversion values
+                       double[] CAD = new double[7];
+                       CAD[0] = 1.00445;
+                       CAD[1] = 0.87586;
+                       CAD[2] = 112.87;
+                       CAD[3] = 0.77367;
+                       CAD[4] = 1.31536;
+                       CAD[5] = 1.41955;
+                       CAD[6] = 14.3918; 
+                       // AUD conversion values
+                       double[] AUD = new double[7];
+                       AUD[0] = 0.70744;
+                       AUD[1] = 0.61688;
+                       AUD[2] = 79.50;
+                       AUD[3] = 0.54488;
+                       AUD[4] = 0.70415;
+                       AUD[5] = 0.92641;
+                       AUD[6] = 10.1362; 
+                       // ZAR conversion values
+                       double[] ZAR = new double[7];
+                       ZAR[0] = 0.06972;
+                       ZAR[1] = 0.06079;
+                       ZAR[2] = 7.83;
+                       ZAR[3] = 0.05370;
+                       ZAR[4] = 0.06939;
+                       ZAR[5] = 0.09130;
+                       ZAR[6] = 0.09853; 
+                       // calculator for conversions
+                       switch (systm) {
+                         // if converting from USD
+                         case 1:
+                        switch (systmm) {
+                          case 2:
+                          Console.WriteLine("\n" + eur + amountt * USD[0]);
+                          break;
+                          case 3:
+                          Console.WriteLine("\n"+ jpy + amountt * USD[1]);
+                          break;
+                          case 4:
+                          Console.WriteLine("\n" + gbp + amountt * USD[2]);
+                          break;
+                          case 5:
+                          Console.WriteLine("\n" + chf + amountt * USD[3]);
+                          break;
+                          case 6:
+                          Console.WriteLine("\n" + cad + amountt * USD[4]);
+                          break;
+                          case 7:
+                          Console.WriteLine("\n" + aud + amountt * USD[5]);
+                          break;
+                          case 8:
+                          Console.WriteLine("\n" + zar + amountt * USD[6]);
+                          break;
+                        }
+                         break;
+                         // if converting from EUR
+                         case 2:
+                         switch (systmm) {
+                          case 1:
+                          Console.WriteLine("\n" + usd + amountt * EUR[0]);
+                          break;
+                          case 3:
+                          Console.WriteLine("\n" + jpy + amountt * EUR[1]);
+                          break;
+                          case 4:
+                          Console.WriteLine("\n" + gbp + amountt * EUR[2]);
+                          break;
+                          case 5:
+                          Console.WriteLine("\n" + chf + amountt * EUR[3]);
+                          break;
+                          case 6:
+                          Console.WriteLine("\n" + cad + amountt * EUR[4]);
+                          break;
+                          case 7:
+                          Console.WriteLine("\n" + aud + amountt * EUR[5]);
+                          break;
+                          case 8:
+                          Console.WriteLine("\n" + zar + amountt * EUR[6]);
+                          break;
+                        }
+                         break;
+                         // if converting from JPY
+                         case 3:
+                         switch (systmm) {
+                          case 1:
+                          Console.WriteLine("\n" + usd + amountt * JPY[0]);
+                          break;
+                          case 2:
+                          Console.WriteLine("\n" + eur + amountt * JPY[1]);
+                          break;
+                          case 4:
+                          Console.WriteLine("\n" + gbp + amountt * JPY[2]);
+                          break;
+                          case 5:
+                          Console.WriteLine("\n" + chf + amountt * JPY[3]);
+                          break;
+                          case 6:
+                          Console.WriteLine("\n" + cad + amountt * JPY[4]);
+                          break;
+                          case 7:
+                          Console.WriteLine("\n" + aud + amountt * JPY[5]);
+                          break;
+                          case 8:
+                          Console.WriteLine("\n" + zar + amountt * JPY[6]);
+                          break;
+                        }
+                         break;
+                         // if converting from GBP
+                         case 4:
+                          switch (systmm) {
+                          case 1:
+                          Console.WriteLine("\n" + usd + amountt * GBP[0]);
+                          break;
+                          case 2:
+                          Console.WriteLine("\n" + eur + amountt * GBP[1]);
+                          break;
+                          case 3:
+                          Console.WriteLine("\n" + jpy + amountt * GBP[2]);
+                          break;
+                          case 5:
+                          Console.WriteLine("\n" + chf + amountt * GBP[3]);
+                          break;
+                          case 6:
+                          Console.WriteLine("\n" + cad + amountt * GBP[4]);
+                          break;
+                          case 7:
+                          Console.WriteLine("\n" + aud + amountt * GBP[5]);
+                          break;
+                          case 8:
+                          Console.WriteLine("\n" + zar + amountt * GBP[6]);
+                          break;
+                        }
+                         break;
+                         // if converting from CHF
+                         case 5:
+                         switch (systmm) {
+                          case 1:
+                          Console.WriteLine("\n" + usd + amountt * CHF[0]);
+                          break;
+                          case 2:
+                          Console.WriteLine("\n" + eur + amountt * CHF[1]);
+                          break;
+                          case 3:
+                          Console.WriteLine("\n" + jpy + amountt * CHF[2]);
+                          break;
+                          case 4:
+                          Console.WriteLine("\n" + gbp + amountt * CHF[3]);
+                          break;
+                          case 6:
+                          Console.WriteLine("\n" + cad + amountt * CHF[4]);
+                          break;
+                          case 7:
+                          Console.WriteLine("\n" + aud + amountt * CHF[5]);
+                          break;
+                          case 8:
+                          Console.WriteLine("\n" + zar + amountt * CHF[6]);
+                          break;
+                        }
+                         break;
+                         // if converting from CAD
+                         case 6:
+                         switch (systmm) {
+                          case 1:
+                          Console.WriteLine("\n" + usd + amountt * CAD[0]);
+                          break;
+                          case 2:
+                          Console.WriteLine("\n" + eur + amountt * CAD[1]);
+                          break;
+                          case 3:
+                          Console.WriteLine("\n" + jpy + amountt * CAD[2]);
+                          break;
+                          case 4:
+                          Console.WriteLine("\n" + gbp + amountt * CAD[3]);
+                          break;
+                          case 5:
+                          Console.WriteLine("\n" + chf + amountt * CAD[4]);
+                          break;
+                          case 7:
+                          Console.WriteLine("\n" + aud + amountt * CAD[5]);
+                          break;
+                          case 8:
+                          Console.WriteLine("\n" + zar + amountt * CAD[6]);
+                          break;
+                        }
+                         break;
+                         // if converting from AUD
+                         case 7:
+                         switch (systmm) {
+                          case 1:
+                          Console.WriteLine("\n" + usd + amountt * AUD[0]);
+                          break;
+                          case 2:
+                          Console.WriteLine("\n" + eur + amountt * AUD[1]);
+                          break;
+                          case 3:
+                          Console.WriteLine("\n" + jpy + amountt * AUD[2]);
+                          break;
+                          case 4:
+                          Console.WriteLine("\n" + gbp + amountt * AUD[3]);
+                          break;
+                          case 5:
+                          Console.WriteLine("\n" + chf + amountt * AUD[4]);
+                          break;
+                          case 6:
+                          Console.WriteLine("\n" + cad + amountt * AUD[5]);
+                          break;
+                          case 8:
+                          Console.WriteLine("\n" + zar + amountt * AUD[6]);
+                          break;
+                        }
+                         break;
+                         // if converting from ZAR
+                         case 8:
+                         switch (systmm) {
+                          case 1:
+                          Console.WriteLine("\n" + usd + amountt * ZAR[0]);
+                          break;
+                          case 2:
+                          Console.WriteLine("\n" + eur + amountt * ZAR[1]);
+                          break;
+                          case 3:
+                          Console.WriteLine("\n" + jpy + amountt * ZAR[2]);
+                          break;
+                          case 4:
+                          Console.WriteLine("\n" + gbp + amountt * ZAR[3]);
+                          break;
+                          case 5:
+                          Console.WriteLine("\n" + chf + amountt * ZAR[4]);
+                          break;
+                          case 6:
+                          Console.WriteLine("\n" + cad + amountt * ZAR[5]);
+                          break;
+                          case 8:
+                          Console.WriteLine("\n" + aud + amountt * ZAR[6]);
+                          break;
+                        }
+                         break;
+
+                       }
+                       Thread.Sleep(5000);
+
+                Console.WriteLine("\n\nThis Currency Conversion Calculator was created, and modified by: \nJARED PLASBERG.\n\n");
+                quit = Console.ReadLine();
+                
+                }
+            
+            }
+        }   }
+                Environment.Exit(0);
+                
+            
+        
+        }
+    
+}
